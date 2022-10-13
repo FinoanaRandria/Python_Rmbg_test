@@ -11,3 +11,5 @@ output_path = 'output.png'
 input =Image.open(input_path)
 output = remove(input)
 output.save(output_path)
+
+root.tk
