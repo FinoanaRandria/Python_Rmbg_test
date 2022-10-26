@@ -1,11 +1,10 @@
-from glob import glob
-from importlib.resources import path
-from select import select
-from tkinter import filedialog
+
+from asyncio import streams
 from rembg import remove
-from PIL import Image
-from tkinter import *
+import PIL
+import io
 import glob
+#run
 
 #section barre de menu
 files = glob.glob("images/*.jpg")
@@ -15,7 +14,7 @@ len(files)
     
 for file in files:
     input_path = file
-    output_path = input_path.replace('images','result')
+    output_path = input_path.replace('images','results')
     
     with open(input_path, 'rb') as i:
         with open(output_path,'wb') as o:
